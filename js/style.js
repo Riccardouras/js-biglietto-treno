@@ -7,22 +7,20 @@ linea
     let km = prompt("Che distanza vuoi percorrere?");
     console.log(`km`);
     const prezzo  = 0.21;
-    let prezzoalkm = km * prezzo;
+    let prezzoalkm = Math.round( km * prezzo);
     console.log(`prezzoalkm`)
     let eta = prompt("Quanti anni hai?");  
     console.log(`eta`);
-    let minorenni = (18 <= eta); 
-    let anziani = (65 >= eta);
-    let prezzominorenni = (prezzoalkm / 5);
-    let prezzoanziani = ((prezzoalkm * 40) / 100);
+    let prezzominorenni = Math.round(prezzoalkm / 5);
+    let prezzoanziani = Math.round((prezzoalkm * 40) / 100);
 
-    if( eta=true){
+    if( eta=Number){
 
         console.log(`prezzoalkm`)
     } else{
         document.getElementById("totale").innerHTML = `Ok, ma quanti anni hai?`
     }
-    if ( km=true){
+    if ( km=Number){
 
         console.log(`prezzoalkm`)
     } else{
